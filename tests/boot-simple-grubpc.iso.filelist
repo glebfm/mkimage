@@ -114,13 +114,13 @@ dr-xr-xr-x 0 0 boot/grub/themes
 -r--r--r-- 0 0 boot/grub/i386-pc/gcry_whirlpool.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gdb.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gdb_grub
+-r--r--r-- 0 0 boot/grub/i386-pc/gdb_helper.py
 -r--r--r-- 0 0 boot/grub/i386-pc/geli.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gettext.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gfxmenu.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gfxterm.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gfxterm_background.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gfxterm_menu.mod
--r--r--r-- 0 0 boot/grub/i386-pc/gmodule.pl
 -r--r--r-- 0 0 boot/grub/i386-pc/gptsync.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/gzio.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/halt.mod
@@ -219,6 +219,7 @@ dr-xr-xr-x 0 0 boot/grub/themes
 -r--r--r-- 0 0 boot/grub/i386-pc/pci.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/pcidump.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/pgp.mod
+-r--r--r-- 0 0 boot/grub/i386-pc/plainmount.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/plan9.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/play.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/png.mod

@@ -30,6 +30,7 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/i386-efi/bfs.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/bitmap.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/bitmap_scale.mod
+-r--r--r-- 0 0 boot/grub/i386-efi/bli.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/blocklist.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/blscfg.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/boot.mod
@@ -70,6 +71,7 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/i386-efi/echo.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/efifwsetup.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/efinet.mod
+-r--r--r-- 0 0 boot/grub/i386-efi/efitextmode.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/efi_gop.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/efi_uga.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/ehci.mod
@@ -111,13 +113,13 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/i386-efi/gcry_whirlpool.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gdb.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gdb_grub
+-r--r--r-- 0 0 boot/grub/i386-efi/gdb_helper.py
 -r--r--r-- 0 0 boot/grub/i386-efi/geli.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gettext.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gfxmenu.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gfxterm.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gfxterm_background.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gfxterm_menu.mod
--r--r--r-- 0 0 boot/grub/i386-efi/gmodule.pl
 -r--r--r-- 0 0 boot/grub/i386-efi/gptsync.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/gzio.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/halt.mod
@@ -213,6 +215,7 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/i386-efi/pbkdf2_test.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/pcidump.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/pgp.mod
+-r--r--r-- 0 0 boot/grub/i386-efi/plainmount.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/play.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/png.mod
 -r--r--r-- 0 0 boot/grub/i386-efi/priority_queue.mod
@@ -313,6 +316,7 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/x86_64-efi/bfs.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/bitmap.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/bitmap_scale.mod
+-r--r--r-- 0 0 boot/grub/x86_64-efi/bli.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/blocklist.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/blscfg.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/boot.mod
@@ -353,6 +357,7 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/x86_64-efi/echo.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/efifwsetup.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/efinet.mod
+-r--r--r-- 0 0 boot/grub/x86_64-efi/efitextmode.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/efi_gop.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/efi_uga.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/ehci.mod
@@ -393,13 +398,13 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gcry_twofish.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gcry_whirlpool.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gdb_grub
+-r--r--r-- 0 0 boot/grub/x86_64-efi/gdb_helper.py
 -r--r--r-- 0 0 boot/grub/x86_64-efi/geli.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gettext.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gfxmenu.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gfxterm.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gfxterm_background.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gfxterm_menu.mod
--r--r--r-- 0 0 boot/grub/x86_64-efi/gmodule.pl
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gptsync.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/gzio.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/halt.mod
@@ -495,6 +500,7 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/x86_64-efi/pbkdf2_test.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/pcidump.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/pgp.mod
+-r--r--r-- 0 0 boot/grub/x86_64-efi/plainmount.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/play.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/png.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/priority_queue.mod
@@ -579,13 +585,13 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/x86_64-efi/zstd.mod
 -r--r--r-- 0 0 EFI/BOOT/BOOTIA32.EFI
 -r--r--r-- 0 0 EFI/BOOT/BOOTX64.EFI
--r--r--r-- 0 0 syslinux/alt0/full.cz
 -r--r--r-- 0 0 EFI/BOOT/full.cz
+-r--r--r-- 0 0 syslinux/alt0/full.cz
 -r--r--r-- 0 0 EFI/BOOT/grub.cfg
 -r--r--r-- 0 0 EFI/BOOT/vmlinuz
 -r--r--r-- 0 0 syslinux/alt0/vmlinuz
 -r--r--r-- 0 0 syslinux/gfxboot.c32
--r--r--r-- 0 0 syslinux/isolinux.cfg
 -r--r--r-- 0 0 boot/grub/grub.cfg
--r--r--r-- 0 0 boot/grub/x86_64-efi/fdt.lst
 -r--r--r-- 0 0 boot/grub/i386-efi/fdt.lst
+-r--r--r-- 0 0 boot/grub/x86_64-efi/fdt.lst
+-r--r--r-- 0 0 syslinux/isolinux.cfg
