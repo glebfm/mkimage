@@ -86,32 +86,32 @@ case "$boot_type" in
 	isolinux)
 		export GLOBAL_TEST_MKI_PACK_RESULTS=boot:"$TEST"
 		export GLOBAL_TEST_BOOT_TYPE=isolinux-boot
-		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-image-std-def
+		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-latest
 		;;
 	grubpc)
 		export GLOBAL_TEST_MKI_PACK_RESULTS=boot:"$TEST"
 		export GLOBAL_TEST_BOOT_TYPE=grub-pc-boot
-		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-image-std-def
+		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-latest
 		;;
 	pxelinux|syslinux)
 		export GLOBAL_TEST_MKI_PACK_RESULTS=boot:"$TEST"
 		export GLOBAL_TEST_BOOT_TYPE="$boot_type"
-		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-image-std-def
+		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-latest
 		;;
 	efiboot-grub-efi)
 		export GLOBAL_TEST_MKI_PACK_RESULTS=boot:"$TEST"
 		export GLOBAL_TEST_BOOT_TYPE=efiboot
-		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-image-std-def
+		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-latest
 		;;
 	hybrid-isolinux-efiboot-grub-efi)
 		export GLOBAL_TEST_MKI_PACK_RESULTS=boot:"$TEST"
 		export GLOBAL_TEST_BOOT_TYPE="isolinux-boot efiboot"
-		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-image-std-def
+		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-latest
 		;;
 	hybrid-grubpc-efiboot-grub-efi)
 		export GLOBAL_TEST_MKI_PACK_RESULTS=boot:"$TEST"
 		export GLOBAL_TEST_BOOT_TYPE="grub-pc-boot efiboot"
-		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-image-std-def
+		export GLOBAL_TEST_CHROOT_PACKAGES=kernel-latest
 		;;
 	*)
 		;;
