@@ -39,9 +39,12 @@ TESTS = \
 	boot-simple-grubpc.iso \
 	boot-simple-pxelinux.data \
 	boot-simple-syslinux.data \
+	boot-simple-efiboot-grub-efi+sb.iso \
 	boot-simple-efiboot-grub-efi.iso \
-	boot-simple-hybrid-isolinux-efiboot-grub-efi.iso \
+	boot-simple-hybrid-grubpc-efiboot-grub-efi+sb.iso \
 	boot-simple-hybrid-grubpc-efiboot-grub-efi.iso \
+	boot-simple-hybrid-isolinux-efiboot-grub-efi+sb.iso \
+	boot-simple-hybrid-isolinux-efiboot-grub-efi.iso \
 	#
 
 .PHONY: $(TESTS) check all distclean
