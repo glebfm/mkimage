@@ -880,8 +880,8 @@ dr-xr-xr-x 0 0 EFI/BOOT
 -r--r--r-- 0 0 boot/grub/x86_64-efi/zfsinfo.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/zstd.mod
 -r--r--r-- 0 0 boot/vmlinuz
--r--r--r-- 0 0 EFI/BOOT/bootia32.efi
--r--r--r-- 0 0 EFI/BOOT/bootx64.efi
+-r--r--r-- 0 0 EFI/BOOT/BOOTIA32.EFI
+-r--r--r-- 0 0 EFI/BOOT/BOOTX64.EFI
 -r--r--r-- 0 0 EFI/BOOT/grub.cfg
 -r--r--r-- 0 0 EFI/BOOT/vmlinuz
 -r--r--r-- 0 0 boot/grub/x86_64-efi/fdt.lst

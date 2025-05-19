@@ -577,8 +577,8 @@ dr-xr-xr-x 0 0 syslinux/alt0
 -r--r--r-- 0 0 boot/grub/x86_64-efi/zfscrypt.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/zfsinfo.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/zstd.mod
--r--r--r-- 0 0 EFI/BOOT/bootia32.efi
--r--r--r-- 0 0 EFI/BOOT/bootx64.efi
+-r--r--r-- 0 0 EFI/BOOT/BOOTIA32.EFI
+-r--r--r-- 0 0 EFI/BOOT/BOOTX64.EFI
 -r--r--r-- 0 0 syslinux/alt0/full.cz
 -r--r--r-- 0 0 EFI/BOOT/full.cz
 -r--r--r-- 0 0 EFI/BOOT/grub.cfg
