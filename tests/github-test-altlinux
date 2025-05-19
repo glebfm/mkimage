@@ -13,8 +13,6 @@ readonly IMAGE=alt:sisyphus
 
 echo 0 > /proc/sys/fs/protected_hardlinks
 
-git clone https://github.com/altlinux/hasher-priv
-
 mkdir -v -p -- "$curdir/tmp"
 cat > "$curdir/tmp/run.sh" <<-EOF
 #!/bin/bash -eux
@@ -32,30 +30,19 @@ apt-get -y -qq install \
 
 cd "$builddir"
 
-cd hasher-priv/hasher-priv
-	sed -i \
-		-e 's# "\$caller_uid" -gt 0 # "\$caller_uid" -gt -1 #' \
-		-- hasher-useradd.in
-
-	sed -i \
-		-e 's#pw->pw_[ug]id < MIN_CHANGE_[UG]ID# 0 #' \
-		-- caller_config.c
-
-	sed -i \
-		-e 's#[ug]id < MIN_CHANGE_[UG]ID || [ug]id == get[ug]id()# 0 #' \
-		-- hasher-privd.c
-
-	make install
-cd -
-
 id
 
-hasher-useradd "\$(id -u -n)"
+hasher-useradd --force "\$(id -u -n)"
 mkdir -p -- \$HOME/hasher
 
 : "Prepare services"
 tee /etc/syslog.conf <<EOF1
 *.* -/var/log/syslog/messages
+EOF1
+
+tee -a /etc/hasher-priv/daemon.conf <<EOF1
+min_uid=-1
+min_gid=-1
 EOF1
 
 tee /etc/hasher-priv/system <<EOF1
