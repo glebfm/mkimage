@@ -36,35 +36,47 @@ prepare-image-workdir: prepare-workdir $(SUBDIRS)
 	    $(CHROOT_CACHE) build $@ || exit 1; \
 	fi
 
-run-scripts: prepare-workdir $(SUBDIRS)
-	@echo "mkimage: Processing '$@' ..."
-	@if ! $(CHROOT_CACHE) check $@; then \
+define run_scripts
+	@echo "mkimage: Processing '$(1)' ..."
+	@if ! $(CHROOT_CACHE) check run-scripts $(1); then \
 	    if ! $(CHROOT_SCRIPTS); then \
 		$(CHROOT_INVALIDATE_CACHE) mki; \
 		exit 1; \
 	    fi; \
-	    $(CHROOT_CACHE) build $@ || exit 1; \
+	    $(CHROOT_CACHE) build run-scripts $(1) || exit 1; \
 	fi
+endef
 
-run-image-scripts: prepare-image-workdir $(SUBDIRS)
-	@echo "mkimage: Processing '$@' ..."
-	@if ! $(CHROOT_CACHE) check $@; then \
+run-scripts: prepare-workdir $(SUBDIRS)
+	$(call run_scripts,$@)
+
+define run_image_scripts
+	@echo "mkimage: Processing '$(1)' ..."
+	@if ! $(CHROOT_CACHE) check run-image-scripts $(1); then \
 	    if ! $(CHROOT_IMAGE_SCRIPTS); then \
 		$(CHROOT_INVALIDATE_CACHE) mki; \
 		exit 1; \
 	    fi; \
-	    $(CHROOT_CACHE) build $@ || exit 1; \
+	    $(CHROOT_CACHE) build run-image-scripts $(1) || exit 1; \
 	fi
+endef
+
+run-image-scripts: prepare-image-workdir $(SUBDIRS)
+	$(call run_image_scripts,$@)
+
+define run_image_patches
+	@echo "mkimage: Processing '$(1)' ..."
+	@if ! $(CHROOT_CACHE) check run-image-patches $(1); then \
+	    if ! $(CHROOT_IMAGE_PATCHES); then \
+		$(CHROOT_INVALIDATE_CACHE) mki; \
+		exit 1; \
+	    fi; \
+	    $(CHROOT_CACHE) build run-image-patches $(1) || exit 1; \
+	fi
+endef
 
 run-image-patches: prepare-image-workdir $(SUBDIRS)
-	@echo "mkimage: Processing '$@' ..."
-	@if ! $(CHROOT_CACHE) check $@; then \
-	    if ! $(CHROOT_IMAGE_PATCHES); then \
-	        $(CHROOT_INVALIDATE_CACHE) mki; \
-	        exit 1; \
-	    fi; \
-	    $(CHROOT_CACHE) build $@ || exit 1; \
-	fi
+	$(call run_image_patches,$@)
 
 build-propagator: prepare-workdir $(SUBDIRS)
 	@echo "mkimage: Processing '$@' ..."
