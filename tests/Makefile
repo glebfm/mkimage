@@ -36,6 +36,7 @@ TESTS = \
 	pkgs.squash \
 	pkgs.tar \
 	run-scripts-custom.data \
+	run-image-scripts-custom.data \
 	boot-simple-isolinux.iso \
 	boot-simple-grubpc.iso \
 	boot-simple-pxelinux.data \
