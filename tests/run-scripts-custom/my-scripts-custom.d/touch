@@ -1,0 +1,3 @@
+#!/bin/sh -efu
+
+touch /.image/check-me

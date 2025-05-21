@@ -1,0 +1,4 @@
+#!/bin/sh -efu
+
+ls /.image/check-me
+touch /.image/me-too
