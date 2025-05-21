@@ -37,6 +37,7 @@ TESTS = \
 	pkgs.tar \
 	run-scripts-custom.data \
 	run-image-scripts-custom.data \
+	gen-list-pkgs.data \
 	boot-simple-isolinux.iso \
 	boot-simple-grubpc.iso \
 	boot-simple-pxelinux.data \

@@ -1,0 +1,4 @@
+#!/bin/sh -efu
+
+mkdir /.pkglist
+echo bashrc > /.pkglist/packages

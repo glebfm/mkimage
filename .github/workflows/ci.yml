@@ -46,6 +46,7 @@ jobs:
           "files.tar.lz4",
           "files.tar.xz",
           "files.tar.zst",
+          "gen-list-pkgs.data",
           "pkgs-main.cpio",
           "pkgs-main.data",
           "pkgs-main.iso",
