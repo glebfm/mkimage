@@ -10,8 +10,8 @@
 
 verbose "has started executing."
 
-[ "$#" -eq 2 ] ||
-	fatal "Usage: $PROG <check | build> <target>"
+[ "$#" -eq 2 ] || [ "$#" -eq 3 ] ||
+	fatal "Usage: $PROG <check | build> <target> [keyword]"
 
 action="$1"; shift
 
@@ -20,12 +20,17 @@ if [ -n "${NO_CACHE:-}" ] && [ "$action" = 'check' ]; then
 	exit 1
 fi
 
-cache_type="$1"
+cache_type="$1"; shift
 
 [ -f "${0%/*}/mki-cache-$cache_type" ] ||
 	fatal "$cache_type: unknown target"
 
-cachefile="$cachedir/mki/$cache_type"
+cache_keyword="$cache_type"
+if [ -n "${1-}" ]; then
+	cache_keyword="$1"
+fi
+
+cachefile="$cachedir/mki/$cache_keyword"
 
 workdir_check_status() {
 	return 0
@@ -100,7 +105,7 @@ payload_image_packages()
 
 . "mki-cache-$cache_type"
 
-errlock="$cachedir/mki/$cache_type.error"
+errlock="$cachedir/mki/$cache_keyword.error"
 sha="`{ payload || mkdir -- "$errlock"; } |sha256sum - |cut -d\  -f1`"
 
 if [ -d "$errlock" ]; then
