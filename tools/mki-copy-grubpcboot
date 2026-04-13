@@ -60,8 +60,7 @@ fi
 
 cp $verbose -arf "\$libdir"/grub/"$grub_format" boot/grub/
 find boot/grub/"$grub_format" -type f -name '*.module' -delete ||:
-cp $verbose -Lf /boot/grub/fonts/unicode.pf2 boot/grub/fonts/
-cp $verbose -Lf /boot/grub/unifont.pf2 boot/grub/
+cp $verbose -Lf /usr/share/grub/unicode.pf2 boot/grub/fonts/
 [ ! -d /boot/grub/themes ] || [ -d boot/grub/themes ] ||
 	cp $verbose -arf /boot/grub/themes boot/grub/
 
