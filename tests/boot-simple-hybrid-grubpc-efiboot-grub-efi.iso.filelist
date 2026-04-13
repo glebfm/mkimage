@@ -646,7 +646,6 @@ dr-xr-xr-x 0 0 EFI/BOOT
 -r--r--r-- 0 0 boot/grub/i386-pc/zstd.mod
 -r--r--r-- 0 0 boot/grub/i386-pc/zstdio.mod
 -r--r--r-- 0 0 boot/grub/locale/ru.mo
--r--r--r-- 0 0 boot/grub/unifont.pf2
 -r--r--r-- 0 0 boot/grub/x86_64-efi/acpi.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/adler32.mod
 -r--r--r-- 0 0 boot/grub/x86_64-efi/affs.mod

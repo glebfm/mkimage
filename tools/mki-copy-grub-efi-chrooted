@@ -126,8 +126,7 @@ copy_grub_secondary() {
 			-exec cp $verbose -arf -t "$boot_grub/$grub_arch" -- '{}' '+'
 	done
 
-	cp $verbose -Lf /boot/grub/fonts/unicode.pf2 "$boot_grub/fonts"
-	cp $verbose -Lf /boot/grub/unifont.pf2 "$boot_grub"
+	cp $verbose -Lf /usr/share/grub/unicode.pf2 "$boot_grub/fonts"
 
 	[ ! -d /boot/grub/themes ] || [ -d "$boot_grub/themes" ] ||
 		cp $verbose -arf /boot/grub/themes "$boot_grub"
