@@ -10,6 +10,7 @@ verbose "has started executing."
 destdir="${MKI_DESTDIR:-}"
 
 tempdir="$dir/$PROG.verbose"
+# shellcheck disable=SC2329
 exit_handler() {
     local rc=$?
     trap - EXIT
